@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from './photos/photo/photo.service';
-
 
 @Component({
   selector: 'app-root',
@@ -9,20 +7,4 @@ import { PhotoService } from './photos/photo/photo.service';
 
 })
 
-export class AppComponent implements OnInit{
-  
-  photos: any[] = [];
-  
-  constructor(private photoService : PhotoService){}
-  
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-    
-    this.photoService
-    .listFromUser('flavio')
-    .subscribe(photos => this.photos = photos);
-    
-  }
-  
-
-}
+export class AppComponent { }
